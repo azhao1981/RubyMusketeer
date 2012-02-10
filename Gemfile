@@ -20,6 +20,7 @@ group :test do
   gem 'guard-spork'
   gem 'rspec'
   gem 'cucumber'
+  gem 'database_cleaner'
   gem 'webrat'
   gem 'libnotify'
   gem 'rb-inotify'
