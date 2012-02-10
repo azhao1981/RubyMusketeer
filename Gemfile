@@ -8,6 +8,22 @@ gem 'rails', '3.2.1'
 gem 'mysql2'
 gem 'jquery-ui-bootstrap-rails'
 
+group :development do
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+end
+group :test do
+  gem 'spork'
+  gem 'guard-spork'
+  gem 'rspec'
+  gem 'cucumber'
+  gem 'webrat'
+  gem 'libnotify'
+  gem 'rb-inotify'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
