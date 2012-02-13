@@ -1,6 +1,6 @@
 RubyMusketeer::Application.routes.draw do
   resources :pages
-
+  root :to=>'pages#index' 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
