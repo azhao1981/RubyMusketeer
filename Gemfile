@@ -8,14 +8,13 @@ gem 'rails', '3.2.1'
 gem 'mysql2'
 gem 'jquery-ui-bootstrap-rails'
 
-group :development do
+group :development ,:test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-cucumber'
+  gem 'guard-livereload'
   gem 'rspec-rails'
   gem 'cucumber-rails'
-end
-group :test do
   gem 'spork'
   gem 'guard-spork'
   gem 'rspec'

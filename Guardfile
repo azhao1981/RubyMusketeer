@@ -35,3 +35,12 @@ guard 'cucumber',:cli => '-c --drb --port 1234 --profile guard' do
   watch(%r{^features/support/.+$})          { 'features' }
   watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' }
 end
+
+guard 'livereload' do
+  watch(%r{app/.+\.(erb|haml)})
+  watch(%r{app/helpers/.+\.rb})
+  watch(%r{(public/|app/assets).+\.(css|js|html)})
+  watch(%r{(app/assets/.+\.css)\.s[ac]ss}) { |m| m[1] }
+  watch(%r{(app/assets/.+\.js)\.coffee}) { |m| m[1] }
+  watch(%r{config/locales/.+\.yml})
+end

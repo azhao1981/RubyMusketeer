@@ -7,8 +7,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="topbar">
+    <div class="fill">
+      <div class="container">
+      	<%= link_to "RubyMusketeer","/",:class=>"brand" %>
+        
+        <%= render_list :class => "nav" do |li|
+        	li << link_to("Home","/")
+        	li << link_to("MySources","/githubs")
+        	li << link_to("Friend","/blogs")
+          li << link_to("Resume","/resumes")
+        end %>	
+        <form action="" class="pull-right">
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  	<div class="content">
+  		<div class="page-header">
+        <%= image_tag "TheThreeMusketeers.jpg" %>
+        <h1>WeiZhao <small>I am a Coding Monkey.</small></h1>
+      </div>
+      <div class="row">
+        <div class="span10">
+          <%= yield %>
+        </div>  
+        <div class="span4">SideBar</div>
+      </div>
+  		
+  	</div>
+  	<div class="footer">
+  		<h6>Resume © weiz 2012</h6>
+  	</div>
+  </div>
 </body>
 </html>
